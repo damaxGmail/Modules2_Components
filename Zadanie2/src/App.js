@@ -8,24 +8,22 @@ export const App = () => {
 	const [activeIndex, SetActiveIndex] = useState(0);
 
 	// И определить 3 обработчика: Клик назад, Клик вперед, Начать сначала
-	const clickBack = () => {
-		console.log("Back");
+	const clickBack = (i) => {
+		if (i > 0)
+			SetActiveIndex(i - 1);
 	}
-	const clickForward = () => {
-		console.log("Forvard");
+	const clickForward = (i) => {
+		if (i < steps.length - 1)
+			SetActiveIndex(i + 1);
+		else
+			SetActiveIndex(0);
 	}
-	const clickBegin = () => {
 
-	}
-
-	const clickActiveIndex = (activeIndex) => {
-		SetActiveIndex(activeIndex);
+	const clickActiveIndex = (i) => {
+		SetActiveIndex(i);
 	}
 
 	// И 2 переменных-флага — находимся ли мы на первом шаге, и находимся ли на последнем
-	let isFirstStep = true;
-	let isLastStep = false;
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.card}>
@@ -41,7 +39,7 @@ export const App = () => {
 						{steps.map((elArray, key) => {
 							return (
 								<li key={key}
-									className={`${styles['steps-item']} ${(isFirstStep && key === 0) ? ` ${styles.active}` : ` ${styles.done}`}`}
+									className={`${styles['steps-item']} ${(key === activeIndex) ? ` ${styles.active}` : ` ${styles.done}`}`}
 								>
 									{/* Для того, чтобы вычислить необходимый класс используйте активный индекс, текущий индекс, а также тернарные операторы */}
 									<button className={styles['steps-item-button']} onClick={() => clickActiveIndex(key)} >{key + 1}</button>
@@ -53,8 +51,8 @@ export const App = () => {
 
 					</ul>
 					<div className={styles['buttons-container']}>
-						<button className={styles.button} onClick={clickBack}>Назад</button>
-						<button className={styles.button} onClick={clickForward}>
+						<button className={styles.button} onClick={() => clickBack(activeIndex)}>Назад</button>
+						<button className={styles.button} onClick={() => clickForward(activeIndex)}>
 							Далее
 							{/* "Начать сначала", можно сделать этой же кнопкой, просто подменять обработчик и текст в зависимости от условия */}
 							{/* Или заменять всю кнопку в зависимости от условия */}

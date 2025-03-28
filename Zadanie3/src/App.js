@@ -45,39 +45,33 @@ export const App = () => {
 			setScreenBackgroundColor('rgba(90, 45, 15, 0.8)');
 		}
 		if (buttonClassName === 'button__operand') {
-			setOperator(value);
-			setScreenValue((prev) => prev + value);
-			setScreenBackgroundColor('rgba(90, 45, 15, 0.8)');
-		}
-
-		if (buttonClassName === 'button__digital') {
-			if (operator) {
-				setOperand2((prev) => {
-					const newValue = prev + String(value);
-					setScreenValue((prevScreen) => prevScreen + value);
-					return newValue;
-				});
-			} else {
-				setOperand1((prev) => {
-					const newValue = prev + String(value);
-					setScreenValue((prevScreen) => prevScreen === '0' ? value : prevScreen + value); // Обновляем экран с новым значением operand1
-					return newValue;
-				});
+			if (operator === '') {
+				setOperator(value);
+				setScreenValue((prev) => prev + value);
+				setScreenBackgroundColor('rgba(90, 45, 15, 0.8)');
 			}
 		}
 
+		if (buttonClassName === 'button__digital') {
 
-		let displayValue = operand1;
+			if (operator) {
+				setOperand2((prev) => {
+					const newValue = prev + String(value);
 
-		if (operator) {
-			displayValue += operator;
+					return newValue;
+				});
+				setScreenValue((prevScreen) => prevScreen + value);
+			} else {
+				setOperand1((prev) => {
+					const newValue = prev + String(value);
+
+					return newValue;
+
+				});
+				setScreenValue((prevScreen) => prevScreen === '0' ? value : prevScreen + value); // Обновляем экран с новым значением operand1
+			}
 		}
 
-		if (operand2) {
-			displayValue += operand2;
-		}
-
-		setScreenValue(displayValue || '0');
 	};
 
 

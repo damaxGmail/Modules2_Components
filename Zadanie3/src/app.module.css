@@ -28,28 +28,9 @@
 		0.299
 	); */ /* Временно, чтобы видеть */
 
-	/*border: 1px
-		solid
-		black;
-
-	border-radius: 5px;
-	*/
-
 	text-align: center;
 	line-height: 40px;
 	cursor: pointer;
-}
-
-.button:hover {
-}
-
-.button:disabled {
-}
-
-.button__digital {
-}
-
-.button__operand {
 }
 
 .screen {
@@ -73,7 +54,7 @@
 		0.8
 	); /* Коричневый с полупрозрачностью */
 
-	font-size: 32px; /* Размер шрифта */
+	font-size: 24px; /* Размер шрифта */
 	line-height: 55px; /* Высота строки равна высоте контейнера */
 	text-align: right; /* Текст справа, как на калькуляторах */
 	color: rgb(
@@ -81,7 +62,6 @@
 		50,
 		50
 	);
-	/* color: #ffff00; */ /* Желтый цвет текста */
 	padding-right: 10px; /* Отступ справа для лучшего визуального восприятия */
 	box-sizing: border-box; /* Учитываем padding в размерах */
 	overflow: hidden; /* Обрезаем текст, если он не помещается */

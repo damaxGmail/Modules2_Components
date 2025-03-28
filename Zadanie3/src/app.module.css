@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
 .container {
 	text-align: center;
 	max-width: 950px;
@@ -17,16 +19,22 @@
 	position: absolute;
 	width: 37px;
 	height: 37px;
-	background-color: rgba(
+	background-color: transparent;
+	color: transparent;
+	/*background-color: rgba(
 		255,
 		255,
 		255,
 		0.299
-	); /* Временно, чтобы видеть */
-	border: 1px
+	); */ /* Временно, чтобы видеть */
+
+	/*border: 1px
 		solid
 		black;
+
 	border-radius: 5px;
+	*/
+
 	text-align: center;
 	line-height: 40px;
 	cursor: pointer;
@@ -48,6 +56,36 @@
 	position: absolute;
 	width: 235px;
 	height: 55px;
+	font-family:
+		'Orbitron',
+		monospace;
+
+	/*background-color: rgba(
+		60,
+		60,
+		60,
+		0.8
+	); */ /* Темно-серый с полупрозрачностью */
+	background-color: rgba(
+		90,
+		45,
+		15,
+		0.8
+	); /* Коричневый с полупрозрачностью */
+
+	font-size: 32px; /* Размер шрифта */
+	line-height: 55px; /* Высота строки равна высоте контейнера */
+	text-align: right; /* Текст справа, как на калькуляторах */
+	color: rgb(
+		50,
+		50,
+		50
+	);
+	/* color: #ffff00; */ /* Желтый цвет текста */
+	padding-right: 10px; /* Отступ справа для лучшего визуального восприятия */
+	box-sizing: border-box; /* Учитываем padding в размерах */
+	overflow: hidden; /* Обрезаем текст, если он не помещается */
+	border-radius: 5px; /* Легкое скругление углов */
 
 	/*background-color: rgba(
 		255,

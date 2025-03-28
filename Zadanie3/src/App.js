@@ -7,7 +7,7 @@ export const App = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.screen} style={{ top: "37px", left: "37px" }}>
-
+				1234567890
 			</div>
 			<div className={styles.buttons}>
 				{buttonsData.map((button, index) => (

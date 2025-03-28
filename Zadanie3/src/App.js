@@ -1,28 +1,24 @@
 import styles from './app.module.css';
+import buttonsData from './buttons.json';
 import { useState } from 'react';
 
 export const App = () => {
-	const ourDigitals = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 	return (
 		<div className={styles.container}>
-			<div className={styles.screen}>
+			<div className={styles.screen} style={{ top: "37px", left: "37px" }}>
 
 			</div>
 			<div className={styles.buttons}>
-				<div className={`${styles.button} ${styles.button__digital}`}>
-					<div className={styles.button__digital}>
-						CE/C
+				{buttonsData.map((button, index) => (
+					<div
+						key={index}
+						className={`${styles.button} ${styles[button.className]}`}
+						style={{ top: button.top, left: button.left, height: button.height ? button.height : '37px' }}
+					>
+						{button.value}
 					</div>
-					{ourDigitals.map(num => (
-						<div key={num} className={styles.button__digital}>
-							{num}
-						</div>
-					))}
-				</div>
-				<div className={`${styles.button} ${styles.button__operand}`}>
-
-				</div>
+				))}
 			</div>
 		</div>
 	);

@@ -1,0 +1,16 @@
+[
+	{ "value": "0", "className": "button__digital", "top": "340px", "left": "70px" },
+	{ "value": "1", "className": "button__digital", "top": "295px", "left": "70px" },
+	{ "value": "2", "className": "button__digital", "top": "295px", "left": "115px" },
+	{ "value": "3", "className": "button__digital", "top": "295px", "left": "155px" },
+	{ "value": "4", "className": "button__digital", "top": "250px", "left": "70px" },
+	{ "value": "5", "className": "button__digital", "top": "250px", "left": "115px" },
+	{ "value": "6", "className": "button__digital", "top": "250px", "left": "155px" },
+	{ "value": "7", "className": "button__digital", "top": "205px", "left": "70px" },
+	{ "value": "8", "className": "button__digital", "top": "205px", "left": "115px" },
+	{ "value": "9", "className": "button__digital", "top": "205px", "left": "155px" },
+	{ "value": "CE/C", "className": "button__digital", "top": "340px", "left": "25px" },
+	{ "value": "+", "className": "button__operand", "top": "300px", "left": "205px" , "height": "75px"},
+	{ "value": "-", "className": "button__operand", "top": "250px", "left": "205px" },
+	{ "value": "=", "className": "button__operand", "top": "300px", "left": "245px" , "height": "75px" }
+  ]
